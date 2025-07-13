@@ -1,8 +1,8 @@
 .container
   %ul
-    - @article.errors.full_messages.each do |message|
-      %li
-        = message
+    - @comment.errors.full_messages.each do |message|
+      %li= message
+
   = form_with(model: @article, local: true) do |f|
     %div
       = f.label :title, 'タイトル'
