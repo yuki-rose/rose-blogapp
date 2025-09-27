@@ -5,7 +5,7 @@ gem "rails", "~> 7.2.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
+gem "pg", ">= 0.18", "< 2.0"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
@@ -50,6 +50,8 @@ gem "devise"
 
 gem "importmap-rails"
 
+gem "aws-sdk-s3", require: false
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -61,6 +63,8 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "pry-byebug"
+
+  gem "dotenv-rails"
 end
 
 group :development do
