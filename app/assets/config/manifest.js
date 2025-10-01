@@ -3,3 +3,4 @@
 //= link application.js
 //= link trix.css
 //= link actiontext.css
+//= link application.css
