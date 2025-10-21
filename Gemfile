@@ -46,6 +46,8 @@ gem "annotate"
 
 gem "active_decorator"
 
+gem "active_model_serializers"
+
 gem "better_errors"
 
 gem "binding_of_caller"
