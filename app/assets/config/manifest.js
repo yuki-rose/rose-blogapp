@@ -4,3 +4,4 @@
 //= link trix.css
 //= link actiontext.css
 //= link application.css
+//= link_tree ../../javascript/controllers .js
