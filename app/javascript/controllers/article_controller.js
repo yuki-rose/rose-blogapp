@@ -18,7 +18,7 @@ export default class extends Controller {
 
   // ❤️ いいね関連
   fetchLikeStatus() {
-    axios.get(`/articles/${this.articleIdValue}/like.json`)
+    axios.get(`/api/articles/${this.articleIdValue}/like.json`)
       .then((response) => {
         const hasLiked = response.data.hasLiked
         this.handleHeartDisplay(hasLiked)
@@ -52,7 +52,7 @@ export default class extends Controller {
   loadComments() {
     const articleId = this.articleIdValue
 
-    axios.get(`/articles/${articleId}/comments.json`)
+    axios.get(`/api/articles/${articleId}/comments.json`)
       .then((response) => {
         const comments = response.data
         const container = document.querySelector('.comments-container')
@@ -74,7 +74,7 @@ export default class extends Controller {
       return
     }
 
-    axios.post(`/articles/${articleId}/comments`, {
+    axios.post(`/api/articles/${articleId}/comments`, {
       comment: { content: content }
     })
       .then((res) => {

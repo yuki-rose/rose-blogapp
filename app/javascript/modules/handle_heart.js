@@ -2,7 +2,7 @@ import $ from "jquery"
 import axios from "../modules/axios"
 
 export function likeArticle(articleId, handleHeartDisplay) {
-  axios.post(`/articles/${articleId}/like.json`)
+  axios.post(`/api/articles/${articleId}/like.json`)
     .then((response) => {
       if (response.data.status === 'ok') {
         handleHeartDisplay(true)
@@ -16,7 +16,7 @@ export function likeArticle(articleId, handleHeartDisplay) {
 
 // いいね解除処理
 export function unlikeArticle(articleId, handleHeartDisplay) {
-  axios.delete(`/articles/${articleId}/like.json`)
+  axios.delete(`/api/articles/${articleId}/like.json`)
     .then((response) => {
       if (response.data.status === 'ok') {
         handleHeartDisplay(false)
